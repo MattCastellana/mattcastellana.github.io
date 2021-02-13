@@ -1,0 +1,32 @@
+<div id="votd-verse"></div>
+<div id="votd-reference"></div>
+
+<style>
+  * {
+    font-family: Arial;
+  }
+</style>
+
+<script>
+  var verseElement = document.getElementById('votd-verse');
+  var referenceElement = document.getElementById('votd-reference');
+  
+  function getVotd () {
+    fetch('http://mattcastellana.github.io/votd.json')
+    .then( data => { return data.json() } )
+    .then( res => updateVerseDom(res) )
+    .catch( error => console.log(`An error occured: ${error}`) )
+
+    // res = {"verse":["You must have the same attitude that Christ Jesus had."],"reference":"Philippians 2:5 (NLT)"}
+    // updateVerseDom(res)
+  }
+  
+  function updateVerseDom(res) {
+    // set verse text
+    verseElement.innerText = res.verse;
+    // set verse reference
+    referenceElement.innerText = res.reference;
+  }
+
+  getVotd()
+</script>
