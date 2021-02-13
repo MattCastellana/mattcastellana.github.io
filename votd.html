@@ -12,7 +12,7 @@
   var referenceElement = document.getElementById('votd-reference');
   
   function getVotd () {
-    fetch('http://mattcastellana.github.io/votd.json')
+    fetch('https://mattcastellana.github.io/votd.json')
     .then( data => { return data.json() } )
     .then( res => updateVerseDom(res) )
     .catch( error => console.log(`An error occured: ${error}`) )
