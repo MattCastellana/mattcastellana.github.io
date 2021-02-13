@@ -1,5 +1,5 @@
-<div id="votd-verse"></div>
-<small><div id="votd-reference"></div></small>
+<div id="votd-verse">You must have the same attitude that Christ Jesus had.</div>
+<small><div id="votd-reference">Philippians 2:5 (NLT)</div></small>
 
 <style>
   * {
@@ -27,22 +27,22 @@
   var verseElement = document.getElementById('votd-verse');
   var referenceElement = document.getElementById('votd-reference');
   
-  function getVotd () {
-    // fetch('https://mattcastellana.github.io/votd.json')
-    // .then( data => { return data.json() } )
-    // .then( res => updateVerseDom(res) )
-    // .catch( error => console.log(`An error occured: ${error}`) )
+  // function getVotd () {
+  //   // fetch('https://mattcastellana.github.io/votd.json')
+  //   // .then( data => { return data.json() } )
+  //   // .then( res => updateVerseDom(res) )
+  //   // .catch( error => console.log(`An error occured: ${error}`) )
 
-    res = {"verse":["You must have the same attitude that Christ Jesus had."],"reference":"Philippians 2:5 (NLT)"}
-    updateVerseDom(res)
-  }
+  //   res = {"verse":["You must have the same attitude that Christ Jesus had."],"reference":"Philippians 2:5 (NLT)"}
+  //   updateVerseDom(res)
+  // }
   
-  function updateVerseDom(res) {
-    // set verse text
-    verseElement.innerText = res.verse;
-    // set verse reference
-    referenceElement.innerText = res.reference;
-  }
+  // function updateVerseDom(res) {
+  //   // set verse text
+  //   verseElement.innerText = res.verse;
+  //   // set verse reference
+  //   referenceElement.innerText = res.reference;
+  // }
 
-  getVotd()
+  // getVotd()
 </script>
