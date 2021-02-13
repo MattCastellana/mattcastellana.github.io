@@ -1,2 +1,2 @@
 #!/bin/sh
-git add -A && git commit -m 'Updated Verse'
+git add -A && git commit -m 'Updated Verse' && git push
